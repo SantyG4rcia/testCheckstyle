@@ -14,4 +14,21 @@
     <module name="LineLength">
         <property name="max" value="120"/>
     </module>
+    <!-- Desactivar reglas -->
+    <module name="JavadocMethod">
+         <property name="severity" value="ignore"/>
+    </module>
+    
+    <!-- Desactivar reglas para ciertos patrones de código -->
+    <module name="SuppressionCommentFilter">
+        <property name="offCommentFormat" value="CHECKSTYLE.OFF\: ([\w\|]+)"/>
+        <property name="onCommentFormat" value="CHECKSTYLE.ON\: ([\w\|]+)"/>
+        </module>
+    </module>
+
+    <!-- Módulos a nivel de archivo -->
+    <module name="FileTabCharacter">
+        <property name="eachLine" value="true"/>
+    </module>
+    </module>
 </module>
