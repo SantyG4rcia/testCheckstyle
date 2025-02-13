@@ -1,0 +1,26 @@
+{
+  "name": "testcheckstyle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky init",
+    "precommit": "npm run checkstyle",
+    "checkstyle": "mvn checkstyle:check"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SantyG4rcia/testCheckstyle.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SantyG4rcia/testCheckstyle/issues"
+  },
+  "homepage": "https://github.com/SantyG4rcia/testCheckstyle#readme",
+  "devDependencies": {
+    "husky": "^9.1.7"
+  }
+}
