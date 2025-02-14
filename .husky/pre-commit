@@ -1,22 +1,2 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
-
-# Obtener solo los archivos Java modificados
-STAGED_FILES=$(git diff --cached --name-only --diff-filter=d | grep "\.java$")
-
-if [ -z "$STAGED_FILES" ]; then
-    echo "✅ No hay archivos Java para verificar"
-    exit 0
-fi
-
-# Ejecutar checkstyle solo en los archivos modificados
-echo "🔍 Verificando archivos Java modificados..."
-for FILE in $STAGED_FILES; do
-    mvn checkstyle:check -Dcheckstyle.includes="$FILE"
-    if [ $? -ne 0 ]; then
-        echo "❌ Checkstyle falló en $FILE"
-        exit 1
-    fi
-done
-
-echo "✅ Checkstyle pasó exitosamente"
+#!/bin/sh
+npm run checkstyle

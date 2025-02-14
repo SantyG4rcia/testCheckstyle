@@ -6,5 +6,6 @@
     <!-- Suprimir reglas específicas -->
     <suppress checks="JavadocMethod" files=".*"/>
     <suppress checks="MethodLength" files=".*"/>
+    <suppress checks="FileTabCharacter" files=".*"/>
     <!-- Puedes añadir más reglas que quieras suprimir -->
 </suppressions>
